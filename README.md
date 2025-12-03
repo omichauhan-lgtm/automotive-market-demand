@@ -1,74 +1,39 @@
 # Automotive Market Demand & Customer Segmentation Analysis
 
 ## ⭐ Overview
-This project analyzes automotive demand patterns, customer purchase capacity, and regional vehicle trends using a structured dataset modeled after real business problems faced during my internship at Rajputana Vehicles Pvt. Ltd. (May–June 2025).
+This project analyzes automotive demand patterns, customer purchase capacity, and regional vehicle trends using a structured dataset modeled after real business problems.
 
-The goal of this project is to demonstrate how a data analyst can use analytics, segmentation, KPI dashboards, and forecasting models to support sales targeting, revenue strategy, and operational decision-making.
+## 📂 Project Structure
+```
+automotive-market-analysis/
+ ├── 📄 README.md               # Project documentation
+ ├── 📄 data.csv                # Synthetic dataset
+ ├── 📄 analysis.py             # Main analysis script (EDA, Clustering, Forecasting)
+ ├── 📄 segmentation_model.ipynb # Jupyter Notebook for interactive analysis
+ ├── 📄 insights_report.md      # Summary of key findings
+ ├── 📄 requirements.txt        # Python dependencies
+ └── 📂 dashboards/             # Generated plots and visualizations
+```
 
-## ⭐ Objectives
-This project focuses on:
-*   **Understanding regional vehicle demand** using market indicators
-*   **Analyzing customer purchase capacity** across segments
-*   **Performing due diligence** on vehicle preference & affordability
-*   **Creating customer segmentation** using clustering techniques
-*   **Building KPI dashboards** for business leadership
-*   **Generating insights** that support revenue optimization
-*   **Recommending sales targeting strategy** based on data
+## 🚀 Getting Started
+1. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. **Run Analysis**:
+   ```bash
+   python analysis.py
+   ```
+   This will generate visualizations in the `dashboards/` folder.
+3. **Explore Notebook**:
+   Open `segmentation_model.ipynb` in Jupyter/VS Code.
 
-## ⭐ Key Tasks Performed
+## ⭐ Key Features
+- **Customer Segmentation**: K-Means clustering to identify Budget, Mid-tier, and Premium buyers.
+- **Demand Forecasting**: Linear regression model to predict purchase probability.
+- **Interactive Dashboards**: Visualizations of income distribution, vehicle preferences, and correlation matrices.
 
-### ✔ 1. Data Cleaning & Preprocessing
-*   Handled missing values, duplicates, outliers
-*   Standardized columns (vehicle_type, region, income_group)
-*   Feature engineering for segmentation
-
-### ✔ 2. Exploratory Data Analysis (EDA)
-*   Demand patterns across regions
-*   Price sensitivity of customers
-*   Income vs spending power correlation
-*   Vehicle category trends (2W, EV, SUV, etc.)
-
-### ✔ 3. Customer Purchase Capacity Analysis
-*   Income band distribution
-*   Affordability index
-*   Demand elasticity by region
-*   Identifying high-value clusters
-
-### ✔ 4. Customer Segmentation (ML)
-*   Applied **K-Means Clustering**
-*   Segmented customers into:
-    *   Budget buyers
-    *   Mid-tier buyers
-    *   Premium buyers
-
-### ✔ 5. KPI Dashboard Development
-*   Built dashboards to track:
-    *   Monthly demand
-    *   Region-wise interest
-    *   Income-based segmentation
-    *   High-value customer zones
-*   **Tools**: Power BI / Tableau / Google Looker Studio
-
-### ✔ 6. Forecasting
-*   Built a basic linear regression model to forecast vehicle demand
-*   Predicted monthly regional sales
-
-## ⭐ Tools & Technologies
-*   **Python**: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
-*   **SQL**: Analysis & reporting queries
-*   **Power BI / Tableau**: For dashboarding
-*   **Excel / Google Sheets**: KPI calculations
-
-## ⭐ Business Impact
-This project simulates real business deliverables from the internship:
-*   Improved targeting accuracy
-*   Better understanding of customer buying capacity
-*   Data-backed sales planning
-*   Clear segmentation for customer outreach
-*   Insights that contribute to measurable revenue improvement
-
-## ⭐ Key Insights
-*   Regions with higher income concentration show stronger demand for EV/SUV categories.
-*   Mid-tier customers hold the largest share of purchase potential.
-*   Customer affordability significantly impacts interest-to-conversion ratio.
-*   Segmentation highlights actionable clusters for sales & marketing teams.
+## ⭐ Insights
+- **High-Income Segments** drive demand for EVs and Luxury vehicles.
+- **Dealer Visits** are a key indicator of purchase intent.
+- **Regional Trends** influence vehicle type preferences.
