@@ -1,39 +1,68 @@
-# Automotive Market Demand & Customer Segmentation Analysis
+# AutoSight - AI-Powered Automotive Analytics SaaS
 
 ## ⭐ Overview
-This project analyzes automotive demand patterns, customer purchase capacity, and regional vehicle trends using a structured dataset modeled after real business problems.
+AutoSight is a multi-tenant SaaS platform that turns regional vehicle stats, purchase-capacity data, and operational metrics into actionable segmentation and revenue targets.
+
+## 🏗️ Architecture
+- **Backend**: FastAPI (Python), SQLAlchemy, PostgreSQL (or SQLite for dev), Redis.
+- **Frontend**: React (Vite), TailwindCSS, Recharts.
+- **Infrastructure**: Docker Compose.
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Docker & Docker Compose
+- Node.js & npm
+- Python 3.9+
+
+### Quick Start (Docker)
+1. **Run the full stack**:
+   ```bash
+   docker-compose up --build
+   ```
+2. **Access the App**:
+   - Frontend: `http://localhost:3000`
+   - Backend API: `http://localhost:8000/docs`
+
+### Manual Setup (Development)
+
+#### Backend
+1. Navigate to `backend/`:
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   ```
+2. Run the server:
+   ```bash
+   uvicorn main:app --reload
+   ```
+
+#### Frontend
+1. Navigate to `frontend/`:
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+
+## 🔑 Key Features
+- **Multi-Tenancy**: Secure login and tenant isolation.
+- **Data Ingestion**: Upload CSV datasets for analysis.
+- **Analytics Dashboard**: Real-time KPIs, Customer Segmentation (K-Means), and Demand Forecasting.
+- **AI Recommendations**: Automated insights based on uploaded data.
 
 ## 📂 Project Structure
 ```
 automotive-market-analysis/
- ├── 📄 README.md               # Project documentation
- ├── 📄 data.csv                # Synthetic dataset
- ├── 📄 analysis.py             # Main analysis script (EDA, Clustering, Forecasting)
- ├── 📄 segmentation_model.ipynb # Jupyter Notebook for interactive analysis
- ├── 📄 insights_report.md      # Summary of key findings
- ├── 📄 requirements.txt        # Python dependencies
- └── 📂 dashboards/             # Generated plots and visualizations
+ ├── 📂 backend/            # FastAPI Application
+ │   ├── 📂 routers/        # API Endpoints (Auth, Tenants, Analytics)
+ │   ├── models.py          # Database Models
+ │   ├── schemas.py         # Pydantic Schemas
+ │   └── main.py            # Entry point
+ ├── 📂 frontend/           # React Application
+ │   ├── 📂 src/
+ │   │   ├── 📂 pages/      # Login, Dashboard, Upload
+ │   │   └── App.tsx        # Routing
+ ├── docker-compose.yml     # Container Orchestration
+ └── README.md              # Documentation
 ```
-
-## 🚀 Getting Started
-1. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. **Run Analysis**:
-   ```bash
-   python analysis.py
-   ```
-   This will generate visualizations in the `dashboards/` folder.
-3. **Explore Notebook**:
-   Open `segmentation_model.ipynb` in Jupyter/VS Code.
-
-## ⭐ Key Features
-- **Customer Segmentation**: K-Means clustering to identify Budget, Mid-tier, and Premium buyers.
-- **Demand Forecasting**: Linear regression model to predict purchase probability.
-- **Interactive Dashboards**: Visualizations of income distribution, vehicle preferences, and correlation matrices.
-
-## ⭐ Insights
-- **High-Income Segments** drive demand for EVs and Luxury vehicles.
-- **Dealer Visits** are a key indicator of purchase intent.
-- **Regional Trends** influence vehicle type preferences.
