@@ -1,7 +1,7 @@
 # AutoSight - AI-Powered Automotive Analytics SaaS
 
 ## ⭐ Overview
-AutoSight is a multi-tenant SaaS platform that turns regional vehicle stats, purchase-capacity data, and operational metrics into actionable segmentation and revenue targets.
+“This project is based on analytical work performed during my Data Analyst Internship at Rajputana Vehicles Pvt. Ltd.”
 
 ## 🏗️ Architecture
 - **Backend**: FastAPI (Python), SQLAlchemy, PostgreSQL (or SQLite for dev), Redis.
